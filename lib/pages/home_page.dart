@@ -45,7 +45,12 @@ decoration: BoxDecoration(gradient: LinearGradient(
   // ),
   child: Row(
     children: [
-      Text("AK"),
+      Text("AK",style: TextStyle(
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
+        decoration: TextDecoration.underline,
+        color: CustomColor.yellowSecondary
+      ),),
       Spacer(),
       for(int i=0; i<navTitles.length; i++)
       Padding(
