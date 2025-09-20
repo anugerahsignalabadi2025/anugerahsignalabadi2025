@@ -1,4 +1,5 @@
 import 'package:cobaasa2/constants/colors.dart';
+import 'package:cobaasa2/constants/nav_items.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,39 +20,64 @@ class _HomePageState extends State<HomePage> {
         children: [
 // MAIN
 Container(
-  height: 500.0,
+  height: 60.0,
+  margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 20.0,),
   width: double.maxFinite,
-  decoration: BoxDecoration(
+decoration: BoxDecoration(gradient: LinearGradient(
+      colors:[
+        Colors.transparent,
+        CustomColor.bgLight1,
+        ]
+        ),
+        borderRadius: BorderRadius.circular(100),),
 
-    gradient: LinearGradient(colors:[Colors.transparent,CustomColor.bgLight1,])
-  ),
+//MASI ERROR
+
+  // decoration: BoxDecoration(
+
+  //   gradient: LinearGradient(
+  //     colors:[
+  //       Colors.transparent,
+  //       CustomColor.bgLight1,
+  //       ]
+  //       ),
+  //       borderRadius: BorderRadius.circular(100),
+  // ),
   child: Row(
     children: [
       Text("AK"),
       Spacer(),
-      for(int i=0; i<5;i++)
-      TextButton(onPressed: (){}, child: Text("button"))
+      for(int i=0; i<navTitles.length; i++)
+      Padding(
+        padding: const EdgeInsets.only(right: 20),
+        child: TextButton(
+          onPressed: (){}, child: Text(navTitles[i],style:TextStyle(fontSize:16,fontWeight: FontWeight.w500,color: CustomColor.whitePrimary ),)),
+      )
     ],
   ),
-  color: Colors.blueGrey,
-),
-// MAIN
-Container(
-  height: 500,
-  width: double.maxFinite,
-  color: Colors.blueGrey,
-),// MAIN
-Container(
-  height: 500,
-  width: double.maxFinite,
-  color: Colors.blueGrey,
-),// MAIN
-Container(
-  height: 500,
-  width: double.maxFinite,
-  color: Colors.blueGrey,
-),
 
+),
+//MAIN
+Container(
+  height: 60.0,
+  width: double.maxFinite,
+  color: Colors.blueGrey,
+),// SKILLS
+Container(
+  height: 500,
+  width: double.maxFinite,
+  color: Colors.blueGrey,
+),// PROJECT
+Container(
+  height: 100,
+  width: double.maxFinite,
+  color: Colors.black12,
+),//FOOTER
+Container(
+  height: 100,
+  width: double.maxFinite,
+  color: Colors.black12,
+),//CONTACT
 
         ],
       )

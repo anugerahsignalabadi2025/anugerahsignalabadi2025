@@ -9,7 +9,7 @@ static const Color hintDark = Color(0xff666874);
 static const Color yellowSecondary = Color(0xffFFc25C);
 static const Color yellowPrimary = Color(0xffFFAF29);
 static const Color whitePrimary = Color(0xffEAEAEB);
-static const Color whiteSecondary = Color(0xffC8C9CE );
+static const Color whiteSecondary = Color(0xffC8C9CE);
 
 
 
