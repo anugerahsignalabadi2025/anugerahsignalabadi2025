@@ -1,7 +1,7 @@
 import 'package:cobaasa2/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
-
+import 'package:cobaasa2/pages/angga.dart';
 void main(){
   runApp(const MyApp());
 }
