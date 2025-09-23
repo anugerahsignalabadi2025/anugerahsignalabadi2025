@@ -14,11 +14,16 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final ScaffoldKey=GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: ScaffoldKey,
       backgroundColor: CustomColor.scaffoldBg,
-
+endDrawer: Drawer(
+  backgroundColor: CustomColor.scaffoldBg,
+),
       body: ListView(
         scrollDirection:Axis.vertical ,
         children: [
@@ -28,7 +33,10 @@ class _HomePageState extends State<HomePage> {
 HeaderMobile(
 
   onLogoTap: (){},
-  onMenuTap: (){  },
+  onMenuTap: (){
+
+    ScaffoldKey.currentState?.openEndDrawer();
+    },
 ),
 
 //MAIN
